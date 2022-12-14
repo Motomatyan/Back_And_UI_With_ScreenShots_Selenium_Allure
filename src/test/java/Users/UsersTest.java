@@ -15,7 +15,7 @@ public class UsersTest extends BaseSeleniumTest {
     public static final String URL3 = "http://users.bugred.ru/";
     @DisplayName("Test with registration")
 
-    @Test
+   @Test
     public void checkAuth(){
         doRegister();
         SearchPage searchPage = new MainPage().auth(UserTestValues.TEST_EMAIL,UserTestValues.TEST_PASSWORD).search(UserTestValues.TEST_EMAIL);
@@ -29,6 +29,7 @@ public class UsersTest extends BaseSeleniumTest {
         Specification.installSpecification(Specification.requestSpec(URL3), Specification.responseSpec200());
         DoRegister user = new DoRegister(UserTestValues.TEST_EMAIL,UserTestValues.TEST_NAME,UserTestValues.TEST_PASSWORD);
         given()
+                .body(user)
                 .when()
                 .post("tasks/rest/doregister")
                 .then().log().all();

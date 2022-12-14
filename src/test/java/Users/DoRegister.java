@@ -1,5 +1,7 @@
 package Users;
 
+import helpers.UserTestValues;
+
 public class DoRegister {
     private String email;
     private String name;

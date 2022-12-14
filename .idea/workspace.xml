@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f5e3bc1-be58-4a35-b328-4d0a253996fd" name="Changes" comment="Add users test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/DoRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/core/Specification.java" afterDir="false" />
+    <list default="true" id="0f5e3bc1-be58-4a35-b328-4d0a253996fd" name="Changes" comment="Add allure and registration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/DoRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/DoRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Users/UsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/UsersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/UserTestValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/UserTestValues.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,9 +112,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsersTest.doRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumTry" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Users" />
+      <option name="MAIN_CLASS_NAME" value="Users.UsersTest" />
+      <option name="METHOD_NAME" value="doRegister" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UsersTest" />
+        <item itemvalue="JUnit.UsersTest.doRegister" />
         <item itemvalue="JUnit.HelpDeskTest" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.UsersTest.check" />
@@ -137,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671016808205</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add allure and registration">
+      <created>1671023896833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671023896833</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +177,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add users test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add users test" />
+    <MESSAGE value="Add allure and registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add allure and registration" />
   </component>
 </project>
