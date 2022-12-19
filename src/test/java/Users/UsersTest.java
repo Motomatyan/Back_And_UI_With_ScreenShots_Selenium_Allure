@@ -18,7 +18,7 @@ public class UsersTest extends BaseSeleniumTest {
    @Test
     public void checkAuth(){
         doRegister();
-        SearchPage searchPage = new MainPage().auth(UserTestValues.TEST_EMAIL,UserTestValues.TEST_PASSWORD).search(UserTestValues.TEST_EMAIL);
+        SearchPage searchPage = new MainPage().signIn().logIn(UserTestValues.TEST_EMAIL,UserTestValues.TEST_PASSWORD).search(UserTestValues.TEST_EMAIL);
         Assertions.assertEquals(searchPage.getEmail(),UserTestValues.TEST_EMAIL);
         Assertions.assertEquals(searchPage.getName(),UserTestValues.TEST_NAME);
 
