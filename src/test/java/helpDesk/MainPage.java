@@ -29,10 +29,10 @@ public class MainPage extends BaseSeleniumPage {
     @FindBy(id = "id_submitter_email")
     private WebElement email;
 
-    public MainPage() {
-        driver.get(ConfigProvider.URL1);
-        PageFactory.initElements(driver, this);
-    }
+   // public MainPage() {
+     //   driver.get(ConfigProvider.URL1);
+       // PageFactory.initElements(driver, this);
+    //}
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement submitButton;
 

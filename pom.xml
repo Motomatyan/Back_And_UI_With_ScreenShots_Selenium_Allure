@@ -106,6 +106,20 @@
       <artifactId>aspectjweaver</artifactId>
       <version>1.9.6</version>
     </dependency>
+    <dependency>
+      <groupId>ru.yandex.qatools.ashot</groupId>
+      <artifactId>ashot</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+    <dependency>
+      <groupId>io.qameta.allure.plugins</groupId>
+      <artifactId>screen-diff-plugin</artifactId>
+      <version>${allure.version}</version>
+    </dependency>
+
+
+
+
   </dependencies>
 
   <build>

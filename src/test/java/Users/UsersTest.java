@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static io.restassured.RestAssured.given;
 
 public class UsersTest extends BaseSeleniumTest {
@@ -16,7 +18,7 @@ public class UsersTest extends BaseSeleniumTest {
     @DisplayName("Test with registration")
 
    @Test
-    public void checkAuth(){
+    public void checkAuth() throws IOException {
         doRegister();
         SearchPage searchPage = new MainPage().signIn().logIn(UserTestValues.TEST_EMAIL,UserTestValues.TEST_PASSWORD).search(UserTestValues.TEST_EMAIL);
         Assertions.assertEquals(searchPage.getEmail(),UserTestValues.TEST_EMAIL);
