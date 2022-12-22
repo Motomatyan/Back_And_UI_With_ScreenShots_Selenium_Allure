@@ -3,6 +3,7 @@ package Users;
 import core.BaseSeleniumTest;
 import core.Specification;
 import helpers.UserTestValues;
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -23,6 +24,8 @@ public class UsersTest extends BaseSeleniumTest {
         SearchPage searchPage = new MainPage().signIn().logIn(UserTestValues.TEST_EMAIL,UserTestValues.TEST_PASSWORD).search(UserTestValues.TEST_EMAIL);
         Assertions.assertEquals(searchPage.getEmail(),UserTestValues.TEST_EMAIL);
         Assertions.assertEquals(searchPage.getName(),UserTestValues.TEST_NAME);
+
+
 
     }
     @Step("DoRegister")

@@ -3,6 +3,7 @@ import javax.imageio.ImageIO;
 
 import core.BaseSeleniumPage;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.Assertions;
 import org.momo.ConfigProvider;
 import org.openqa.selenium.*;
@@ -45,19 +46,25 @@ public class MainPage extends BaseSeleniumPage {
     public MainPage() throws IOException {
         driver.get(URL2);
         PageFactory.initElements(driver,this);
-        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
-        BufferedImage expectedImage = ImageIO.read(new File("C:\\Users\\olgas\\IdeaProjects\\SeleniumTry\\ScreenShots\\MainImage.jpg"));
-        BufferedImage actualImage = screenshot.getImage();
-        ImageDiffer imgDiff = new ImageDiffer();
-        ImageDiff diff = imgDiff.makeDiff(actualImage, expectedImage);
-        BufferedImage diffImage = diff.getDiffImage();
-        //ImageIO.write(diff.getMarkedImage(),"JPG", new File("C:\\Users\\olgas\\IdeaProjects\\SeleniumTry\\ScreenShots\\Difference\\Screen.jpg"));
-        if (diff.hasDiff() == true) {
-            System.out.println("Images are different");
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
+        //ImageIO.write(screenshot.getImage(),"png",new File("C:\\Users\\olgas\\IdeaProjects\\SeleniumTry\\ScreenShots\\MainImage.png"));
+        BufferedImage expectedImage = ImageIO.read(new File("C:\\\\Users\\\\olgas\\\\IdeaProjects\\\\SeleniumTry\\\\ScreenShots\\\\MainImage.png"));
 
-        } else {
-            System.out.println("Images are same");
+        BufferedImage actualImage = screenshot.getImage();
+        ImageDiff diff = new ImageDiffer().withDiffMarkupPolicy(new ImageMarkupPolicy().withDiffColor(Color.RED)).makeDiff(expectedImage, actualImage);
+
+        ImageDiffer imgDiff = new ImageDiffer();
+        BufferedImage diffImage = diff.getDiffImage();
+        ImageIO.write(diff.getMarkedImage(),"png", new File("C:\\Users\\olgas\\IdeaProjects\\SeleniumTry\\ScreenShots\\Difference\\Screen.png"));
+        if (diff.hasDiff() == true) {
+           System.out.println("Images are different");
+
+       }else {
+          System.out.println("Images are same");
         }
+
+
+
 
     }
 
