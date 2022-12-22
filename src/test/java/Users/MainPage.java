@@ -59,16 +59,6 @@ public class MainPage extends BaseSeleniumPage {
 
 
     }
-    /*public Ashot screenShot(WebDriver driver){
-        Ashot screenshot = new Ashot().takeScreenshot(driver);
-        return new Ashot().takeScreenshot(driver);
-    }*/
-
-
-
-
-
-
 
 
     public Authorization signIn() throws IOException {
