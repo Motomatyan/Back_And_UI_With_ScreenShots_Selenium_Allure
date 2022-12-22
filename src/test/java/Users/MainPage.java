@@ -42,9 +42,22 @@ public class MainPage extends BaseSeleniumPage {
 
 
 
-    public MainPage() {
+    public MainPage() throws IOException {
         driver.get(URL2);
         PageFactory.initElements(driver,this);
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+        BufferedImage expectedImage = ImageIO.read(new File("C:\\Users\\olgas\\IdeaProjects\\SeleniumTry\\ScreenShots\\MainImage.jpg"));
+        BufferedImage actualImage = screenshot.getImage();
+        ImageDiffer imgDiff = new ImageDiffer();
+        ImageDiff diff = imgDiff.makeDiff(actualImage, expectedImage);
+        BufferedImage diffImage = diff.getDiffImage();
+        //ImageIO.write(diff.getMarkedImage(),"JPG", new File("C:\\Users\\olgas\\IdeaProjects\\SeleniumTry\\ScreenShots\\Difference\\Screen.jpg"));
+        if (diff.hasDiff() == true) {
+            System.out.println("Images are different");
+
+        } else {
+            System.out.println("Images are same");
+        }
 
     }
 
@@ -62,21 +75,11 @@ public class MainPage extends BaseSeleniumPage {
 
 
     public Authorization signIn() throws IOException {
-        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
-        BufferedImage expectedImage = ImageIO.read(new File("C:\\Users\\olgas\\IdeaProjects\\SeleniumTry\\ScreenShots\\MainImage.jpg"));
-        BufferedImage actualImage = screenshot.getImage();
-        ImageDiffer imgDiff = new ImageDiffer();
-        ImageDiff diff = imgDiff.makeDiff(actualImage, expectedImage);
-        if (diff.hasDiff() == true) {
-            System.out.println("Images are same");
-
-        } else {
-            System.out.println("Images are different");
-        }
         IsElementPresent(usersFirstString);
         IsElementPresent(signInButton);
         signInButton.click();
         return new Authorization();
+
     }
 
 
