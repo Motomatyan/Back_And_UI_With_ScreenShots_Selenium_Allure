@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f5e3bc1-be58-4a35-b328-4d0a253996fd" name="Changes" comment="Add AShot">
+    <list default="true" id="0f5e3bc1-be58-4a35-b328-4d0a253996fd" name="Changes" comment="Fix screenShot comparison">
+      <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/Authorization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Users/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/UsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/UsersTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671702936821</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix screenShot comparison">
+      <created>1671716381724</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671716381724</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +225,7 @@
     <MESSAGE value="Fix registration" />
     <MESSAGE value="Fix PageObject structure" />
     <MESSAGE value="Add AShot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add AShot" />
+    <MESSAGE value="Fix screenShot comparison" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix screenShot comparison" />
   </component>
 </project>

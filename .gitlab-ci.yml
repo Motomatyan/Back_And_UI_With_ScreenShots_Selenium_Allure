@@ -1,0 +1,16 @@
+image: maven:3.8-openjdk-11
+default:
+  tags:
+    - shellCommonLocal
+stages:
+  - test
+
+Integration tests with Allure:
+  stage: test
+  script:
+    - ./mvn clean test
+    - ./mvn allure:serve
+  artifacts:
+    paths:
+      -target/allure-results/*
+
